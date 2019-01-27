@@ -1,0 +1,145 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html body {
+  background-color: #fdfdfd; }
+  html body #root #Routes .navbar {
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    left: 200px;
+    height: 60px;
+    transition: all .3s;
+    background-color: #ecf0f1; }
+    html body #root #Routes .navbar .navbar-brand {
+      cursor: pointer; }
+  html body #root #Routes .navbarToggle {
+    left: 0; }
+  html body #root #Routes .sideNavigations {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: all .3s;
+    background-color: #34495e; }
+    html body #root #Routes .sideNavigations .Menu ul li {
+      padding: 10px;
+      transition: all .2s;
+      cursor: pointer; }
+      html body #root #Routes .sideNavigations .Menu ul li:hover {
+        background-color: #ecf0f1; }
+      html body #root #Routes .sideNavigations .Menu ul li:hover a {
+        color: #34495e; }
+      html body #root #Routes .sideNavigations .Menu ul li a {
+        color: #fdfdfd;
+        outline: none; }
+        html body #root #Routes .sideNavigations .Menu ul li a:hover {
+          text-decoration: none; }
+    html body #root #Routes .sideNavigations .Menu ul .dropdown li:hover {
+      background-color: #ecf0f1; }
+    html body #root #Routes .sideNavigations .Menu ul .dropdown li:hover a {
+      color: #34495e; }
+    html body #root #Routes .sideNavigations .Menu ul .dropdown li:hover .dropdownIcon {
+      color: #34495e; }
+    html body #root #Routes .sideNavigations .Menu ul .dropdown li .dropdownIcon {
+      position: absolute;
+      right: 10px;
+      color: #fdfdfd;
+      transition: all .2s; }
+      html body #root #Routes .sideNavigations .Menu ul .dropdown li .dropdownIcon.active {
+        transform: rotate(90deg); }
+    html body #root #Routes .sideNavigations .Menu ul .dropdown .dropdownMenu {
+      overflow: hidden;
+      transition: all .3s linear; }
+      html body #root #Routes .sideNavigations .Menu ul .dropdown .dropdownMenu .menu ul li {
+        padding-left: 20px; }
+  html body #root #Routes .sideNavigationsToggle {
+    width: 0; }
+  html body #root #Routes .contentWrapper {
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    right: 0;
+    transition: all .3s;
+    z-index: 1;
+    background-color: #fdfdfd;
+    min-height: 100%; }
+    html body #root #Routes .contentWrapper .content {
+      position: relative;
+      top: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 50px; }
+      html body #root #Routes .contentWrapper .content .authMultistep .container .row .col-lg-6 .card .card-header {
+        background-color: #fdfdfd;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.5); }
+        html body #root #Routes .contentWrapper .content .authMultistep .container .row .col-lg-6 .card .card-header .row .col-md-3 .number {
+          margin: auto;
+          text-align: center;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); }
+          html body #root #Routes .contentWrapper .content .authMultistep .container .row .col-lg-6 .card .card-header .row .col-md-3 .number i {
+            line-height: 40px; }
+      html body #root #Routes .contentWrapper .content .authMultistep .container .row .col-lg-6 .card .card-body .form-group button {
+        border: none;
+        box-shadow: none;
+        background-color: #1abc9c; }
+    html body #root #Routes .contentWrapper footer {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      background-color: #ecf0f1;
+      z-index: 3;
+      height: 40px; }
+      html body #root #Routes .contentWrapper footer p {
+        position: relative;
+        top: 10px;
+        padding-left: 30px; }
+  html body #root #Routes .contentWrapperToggle {
+    left: 0; }

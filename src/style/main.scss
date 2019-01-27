@@ -1,0 +1,205 @@
+@import './sass/cssReset';
+
+html{
+	body{
+		background-color: #fdfdfd;
+		#root{
+			#Routes{
+				.navbar{
+					position: fixed;
+					z-index: 2;
+					right: 0;
+					left: 200px;
+					height: 60px;
+					transition: all .3s;
+					background-color: #ecf0f1;
+					.navbar-brand{
+						cursor: pointer;
+						svg{
+
+						}
+					}
+				}
+				.navbarToggle{
+					left: 0;
+				}
+				.sideNavigations{
+					position: fixed;
+					width: 200px;
+					height: 100vh;
+					overflow: hidden;
+					overflow-y: auto;
+					transition: all .3s;
+					background-color: #34495e;
+					.Menu{
+						ul{
+							li{
+								padding: 10px;
+								transition: all .2s;
+								cursor: pointer;
+								&:hover{
+									background-color: #ecf0f1;
+
+								}
+								&:hover a{
+									color: #34495e;
+								}
+								a{
+									color: #fdfdfd;
+									outline: none;
+									&:hover{
+										text-decoration: none;
+										
+									}
+								}
+							}
+							.dropdown{
+								li{
+									&:hover{
+									background-color: #ecf0f1;
+
+									}
+									&:hover a{
+										color: #34495e;
+									}
+									&:hover .dropdownIcon{
+										color: #34495e;
+									}
+									a{
+
+									}
+									.dropdownIcon{
+										position: absolute;
+										right: 10px;
+										color: #fdfdfd;
+										transition: all .2s;
+										&.active{
+											transform: rotate(90deg);
+										}
+									}
+
+								}
+								.dropdownMenu{
+									overflow: hidden;
+									transition: all .3s linear;
+									.menu{
+										ul{
+											li{
+												padding-left: 20px;
+												a{
+
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.sideNavigationsToggle{
+					width: 0;
+				}
+				.contentWrapper{
+					position: absolute;
+					top: 60px;
+					left: 200px;
+					right: 0;
+					transition: all .3s;
+					z-index: 1;
+					background-color: #fdfdfd;
+					min-height: 100%;
+					.content{
+						position: relative;
+						top: 10px;
+						margin-bottom: 10px;
+						padding-bottom: 50px;
+						.authMultistep{
+							.container{
+								.row{
+									.col-lg-6{
+										.card{
+											.card-header{
+												background-color: #fdfdfd;
+												border-bottom: 1px dashed rgba(0,0,0,.5);
+												.row{
+													.col-md-3{
+														.number{
+															margin: auto;
+															text-align: center;
+															height: 40px;
+															width: 40px;
+															border-radius: 50%;
+															box-shadow: 0px 0px 1px rgba(0,0,0,.5);
+															i{
+																line-height: 40px;
+															}
+														}
+													}
+												}
+											}
+											.card-body{
+												.form-group{
+													label{
+
+													}
+													input{
+
+													}
+													button{
+														border: none;
+														box-shadow: none;
+														background-color: #1abc9c;
+													}
+												}
+												.form-row{
+													.col-md-8{
+														.form-group{
+															label{
+
+															}
+															input{
+
+															}
+														}
+													}
+													.col-md-4{
+														.form-group{
+															label{
+
+															}
+															input{
+																
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					footer{
+						position: absolute;
+						width: 100%;
+						bottom: 0;
+						background-color: #ecf0f1;
+						z-index: 3;
+						height: 40px;
+						p{
+							position: relative;
+							top: 10px;
+							padding-left: 30px;
+						}
+					}
+				}
+				.contentWrapperToggle{
+					left: 0;
+				}
+				
+			}
+		}
+	}
+}
