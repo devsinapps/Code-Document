@@ -27,7 +27,7 @@ class SideNavigations extends Component{
 						</Dropdown>
 						<Dropdown title="Fetching Data">
 							<ul>
-								<li> <Link to='/'> Food 2 Fork </Link> </li>
+								<li> <Link to='/food2fork'> Food 2 Fork </Link> </li>
 								<li> <Link to='/openweathermap'> OpenweatherMap </Link> </li>
 								<li> <Link to='/unsplash'> Unsplash </Link> </li>
 							</ul>

@@ -10,6 +10,8 @@ import React from 'react'
 	import ReduxCrud from './../component/content/crud/redux-crud'
 	import Unsplash from './../component/content/fetching-data/Unsplash/'
 	import OpenWeatherMap from './../component/content/fetching-data/OpenWeatherMap/'
+	import Food2Fork from './../component/content/fetching-data/Food2Fork/'
+		import FoodDetail from './../component/content/fetching-data/Food2Fork/FoodDetail'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
@@ -35,6 +37,8 @@ class Routes extends React.Component{
 								<Route path='/reduxcrud' component={ReduxCrud} />
 								<Route path='/unsplash' component={Unsplash} />
 								<Route path='/openweathermap' component={OpenWeatherMap} />
+								<Route path='/food2fork' component={Food2Fork} />
+									<Route path='/fooddetail/:recipe_id' component={FoodDetail} />
 							</Switch>
 						</div>
 						<Footer />
