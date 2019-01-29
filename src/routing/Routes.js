@@ -13,6 +13,12 @@ import React from 'react'
 	import Food2Fork from './../component/content/fetching-data/Food2Fork/'
 		import FoodDetail from './../component/content/fetching-data/Food2Fork/FoodDetail'
 
+	//Sample Project
+		//SIHR
+		import DashboardSIHR from './../component/content/sample-project/SIHR/content/dashboard'
+		import AuthenticationSIHR from './../component/content/sample-project/SIHR/auth'
+		import DataUser from './../component/content/sample-project/SIHR/content/dataUser'
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -39,6 +45,11 @@ class Routes extends React.Component{
 								<Route path='/openweathermap' component={OpenWeatherMap} />
 								<Route path='/food2fork' component={Food2Fork} />
 									<Route path='/fooddetail/:recipe_id' component={FoodDetail} />
+
+								{/*Sample Project*/}
+								<Route path='/sihr' component={DashboardSIHR} />
+								<Route path='/sihr-auth' component={AuthenticationSIHR} />
+								<Route path='/sihr-data-user' component={DataUser} />
 							</Switch>
 						</div>
 						<Footer />

@@ -32,6 +32,13 @@ class SideNavigations extends Component{
 								<li> <Link to='/unsplash'> Unsplash </Link> </li>
 							</ul>
 						</Dropdown>
+						<Dropdown title="Sample Project">
+							<ul>
+								<li> <Link to='/sihr'> SIHR </Link> </li>
+								<li> <Link to='/openweathermap'> OpenweatherMap </Link> </li>
+								<li> <Link to='/unsplash'> Unsplash </Link> </li>
+							</ul>
+						</Dropdown>
 					</ul>
 				</div>
 			</div>
