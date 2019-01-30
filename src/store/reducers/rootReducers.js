@@ -5,6 +5,8 @@ import firebaseCrudReducer from './firebaseCrudReducer'
 //Sample Project Reducer
 	//Sihr
 	import sihrAuthReducer from './sihrAuthReducer'
+	import sihrEmployeeReducer from './sihrEmployeeReducer'
+	import sihrKanbanReducer from './sihrKanbanReducer'
 
 import { firebaseReducer } from 'react-redux-firebase'
 import { firestoreReducer } from 'redux-firestore' 
@@ -17,7 +19,9 @@ const rootReducers = combineReducers({
 	firebaseCrud: firebaseCrudReducer,
 	firebase: firebaseReducer,
 	firestore: firestoreReducer,
-	sihrAuth: sihrAuthReducer
+	sihrAuth: sihrAuthReducer,
+	sihrEmployee: sihrEmployeeReducer,
+	sihrKanban: sihrKanbanReducer
 })
 
 export default rootReducers

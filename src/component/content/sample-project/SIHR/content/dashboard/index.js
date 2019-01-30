@@ -2,7 +2,7 @@ import React from 'react'
 //Actions
 import { signOut } from './../../../../../../store/actions/sihrAuthActions'
 //Component
-import ListNavigation from './ListNavigation'
+import ListNavigation from './../../layout/ListNavigation'
 //Tools
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'

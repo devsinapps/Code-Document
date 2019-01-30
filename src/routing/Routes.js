@@ -18,6 +18,8 @@ import React from 'react'
 		import DashboardSIHR from './../component/content/sample-project/SIHR/content/dashboard'
 		import AuthenticationSIHR from './../component/content/sample-project/SIHR/auth'
 		import DataUser from './../component/content/sample-project/SIHR/content/dataUser'
+		import DataEmployee from './../component/content/sample-project/SIHR/content/dataEmployee'
+		import KanbanSIHR from './../component/content/sample-project/SIHR/content/kanban'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
@@ -50,6 +52,8 @@ class Routes extends React.Component{
 								<Route path='/sihr' component={DashboardSIHR} />
 								<Route path='/sihr-auth' component={AuthenticationSIHR} />
 								<Route path='/sihr-data-user' component={DataUser} />
+								<Route path='/sihr-data-employee' component={DataEmployee} />
+								<Route path='/sihr-kanban' component={KanbanSIHR} />
 							</Switch>
 						</div>
 						<Footer />
