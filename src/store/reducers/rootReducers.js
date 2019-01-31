@@ -1,7 +1,7 @@
 import countryStateReducers from './countryStateReducers'
 import reduxCrudReducer from './reduxCrudReducer'
 import firebaseCrudReducer from './firebaseCrudReducer'
-
+import geoReducer from './geoReducer'
 //Sample Project Reducer
 	//Sihr
 	import sihrAuthReducer from './sihrAuthReducer'

@@ -12,6 +12,7 @@ import React from 'react'
 	import OpenWeatherMap from './../component/content/fetching-data/OpenWeatherMap/'
 	import Food2Fork from './../component/content/fetching-data/Food2Fork/'
 		import FoodDetail from './../component/content/fetching-data/Food2Fork/FoodDetail'
+	import Geolocation from './../component/content/sample-page/Geolocation'
 
 	//Sample Project
 		//SIHR
@@ -47,6 +48,7 @@ class Routes extends React.Component{
 								<Route path='/openweathermap' component={OpenWeatherMap} />
 								<Route path='/food2fork' component={Food2Fork} />
 									<Route path='/fooddetail/:recipe_id' component={FoodDetail} />
+								<Route path='/geolocation' component={Geolocation} />
 
 								{/*Sample Project*/}
 								<Route path='/sihr' component={DashboardSIHR} />
