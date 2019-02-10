@@ -55,6 +55,20 @@ class FirebaseCrud extends React.Component{
 		const check = window.confirm('Delete Data ?')
 		if(check === true){
 			this.props.deleteEmployee(employeeId)
+
+			//if success, set state to default
+			this.setState({
+				employeeId: '',
+				firstName: '',
+				lastName: '',
+				age: '',
+				gender: '',
+				address: '',
+				education: '',
+				country: '',
+				city: '',
+				createdAt: ''
+			})
 		}else{
 			return null
 		}	
@@ -69,6 +83,19 @@ class FirebaseCrud extends React.Component{
 		const employee = { employeeId, firstName, lastName, age, gender, address, education, country, city, createdAt }
 		if(check === true){
 			this.props.updateEmployee(employee)
+			//if success, set state to default
+			this.setState({
+				employeeId: '',
+				firstName: '',
+				lastName: '',
+				age: '',
+				gender: '',
+				address: '',
+				education: '',
+				country: '',
+				city: '',
+				createdAt: ''
+			})
 		}else{
 			return null
 		}
@@ -78,9 +105,36 @@ class FirebaseCrud extends React.Component{
 	onSubmit = (e) => {
 		e.preventDefault();
 		this.props.addEmployee(this.state)
+		//if success, set state to default
+			this.setState({
+				employeeId: '',
+				firstName: '',
+				lastName: '',
+				age: '',
+				gender: '',
+				address: '',
+				education: '',
+				country: '',
+				city: '',
+				createdAt: ''
+			})
+	}
+
+	resetButton = () => {
+		this.setState({
+			employeeId: '',
+			firstName: '',
+			lastName: '',
+			age: '',
+			gender: '',
+			address: '',
+			education: '',
+			country: '',
+			city: '',
+			createdAt: ''
+		})
 	}
 	render(){
-		console.log(this.state)
 		const { employees, countries } = this.props
 		const { employeeId, firstName, lastName, age, gender, address, education, country, city } = this.state
 		const value = { employeeId, firstName, lastName, age, gender, address, education, country, city }
@@ -111,6 +165,7 @@ class FirebaseCrud extends React.Component{
 										onSubmit={this.onSubmit}
 										deleteEmployee={this.deleteEmployee}
 										updateEmployee={this.updateEmployee}
+										resetButton={this.resetButton}
 									/>
 								</CardBody>
 							</Card>

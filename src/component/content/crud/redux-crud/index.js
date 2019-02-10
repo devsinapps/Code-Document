@@ -61,10 +61,15 @@ class ReduxCrud extends React.Component{
 
 		this.props.addMusic(data)
 
-		// this.props.dispatch({
-		// 	type: "ADD_MUSIC",
-		// 	data
-		// })
+		//If sucess, set State to default
+		this.setState({
+			id: null,
+			band:'',
+			genre:'',
+			song : '',
+			album:'',
+			topsell:''
+		})
 	}
 
 
@@ -75,10 +80,15 @@ class ReduxCrud extends React.Component{
 		const check = window.confirm('Delete Music?')
 		if(check === true){
 			this.props.deleteMusic(id)
-			// this.props.dispatch({
-			// 	type: "DELETE_MUSIC",
-			// 	id: id
-			// })
+			//If sucess, set State to default
+			this.setState({
+				id: null,
+				band:'',
+				genre:'',
+				song : '',
+				album:'',
+				topsell:''
+			})
 		}else{
 			return null
 		}
@@ -102,14 +112,30 @@ class ReduxCrud extends React.Component{
 
 			this.props.updateMusic(data)
 
-			// this.props.dispatch({
-			// 	type: "UPDATE_MUSIC",
-			// 	id: id,
-			// 	data: data
-			// })
+			//If sucess, set State to default
+			this.setState({
+				id: null,
+				band:'',
+				genre:'',
+				song : '',
+				album:'',
+				topsell:''
+			})
 		}else{
 			return null
 		}
+	}
+
+	resetButton = () => {
+		//If sucess, set State to default
+		this.setState({
+			id: null,
+			band:'',
+			genre:'',
+			song : '',
+			album:'',
+			topsell:''
+		})
 	}
 	render(){
 		const { id, band, genre, song, album, topsell } = this.state
@@ -141,6 +167,7 @@ class ReduxCrud extends React.Component{
 										onChange={this.onChange}
 										deleteMusic={this.deleteMusic}
 										updateMusic={this.updateMusic}
+										resetButton={this.resetButton}
 									/>
 								</CardBody>
 							</Card>

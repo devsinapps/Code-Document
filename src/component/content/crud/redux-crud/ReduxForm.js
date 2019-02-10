@@ -50,7 +50,7 @@ class ReduxForm extends React.Component{
 					<Button color="primary" disabled={enabled}> Save </Button> {' '}
 					<Button color="warning" onClick={this.props.deleteMusic} disabled={!enabled}> Delete </Button> {' '}
 					<Button color="danger" onClick={this.props.updateMusic} disabled={!enabled}> Update </Button> {' '}
-					<Button color="info"> 
+					<Button color="info" onClick={this.props.resetButton}> 
 						<a href='/'> Reset </a>
 					</Button> {' '}
 				</FormGroup>

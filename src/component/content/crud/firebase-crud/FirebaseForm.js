@@ -101,7 +101,7 @@ class FirebaseForm extends React.Component{
 					<Button color="primary" onClick={this.props.onSubmit} disabled={!enabled}> Save </Button>{' '}
 					<Button color="warning" onClick={this.props.updateEmployee} > Update </Button>{' '}
 					<Button color="danger" onClick={() => this.props.deleteEmployee(value.employeeId)}> Delete </Button>{' '}
-					<Button color="info"> Reset </Button>{' '}
+					<Button color="info" onClick={this.props.resetButton}> Reset </Button>{' '}
 				</FormGroup>
 			</Form>
 		)

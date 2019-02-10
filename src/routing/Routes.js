@@ -13,6 +13,7 @@ import React from 'react'
 	import Food2Fork from './../component/content/fetching-data/Food2Fork/'
 		import FoodDetail from './../component/content/fetching-data/Food2Fork/FoodDetail'
 	import Geolocation from './../component/content/sample-page/Geolocation'
+	import SendPropsInRoute from './../component/content/sample-page/SendPropsInRoute'
 
 	//Sample Project
 		//SIHR
@@ -31,7 +32,19 @@ import { faBars, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 library.add(faBars, faAngleRight)
 
 class Routes extends React.Component{
+	state = {
+		isExpanded: false,
+		value: 'sample-props'
+	}
+
+	toggle = () => {
+		this.setState({
+			isExpanded: !this.state.isExpanded
+		})
+	}
 	render(){
+		console.log(this.state)
+		const { value } = this.state
 		return(
 			<BrowserRouter>
 				<div id="Routes">
@@ -56,6 +69,9 @@ class Routes extends React.Component{
 								<Route path='/sihr-data-user' component={DataUser} />
 								<Route path='/sihr-data-employee' component={DataEmployee} />
 								<Route path='/sihr-kanban' component={KanbanSIHR} />
+
+								{/*How To Send Props in Route*/}
+								<Route path='/sendpropsinroute' render={(routeProps) => (<SendPropsInRoute {...routeProps} toggle={this.toggle} value={value}/> )}/>
 							</Switch>
 						</div>
 						<Footer />
